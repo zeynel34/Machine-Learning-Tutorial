@@ -10,10 +10,8 @@ veriler = pd.read_csv('eksikveriler.csv')
 print(veriler)
 
 #eksik veriler
-#sci - kit learn
-
 from sklearn.impute import SimpleImputer
-
+#Eksik kısımların ortalamasının alınması
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
 
 Yas = veriler.iloc[:,1:4].values
